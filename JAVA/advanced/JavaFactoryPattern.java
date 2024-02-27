@@ -31,9 +31,9 @@ class FoodFactory {
 		 * main code starts from here
 		 */
 
-		if (order.equalsIgnoreCase("Pizza")) {
+		if ("Pizza".equalsIgnoreCase(order)) {
 			return new Pizza();
-		} else if (order.equalsIgnoreCase("Cake")) {
+		} else if ("Cake".equalsIgnoreCase(order)) {
 			return new Cake();
 		}
 		return null;
