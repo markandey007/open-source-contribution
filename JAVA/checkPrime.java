@@ -1,3 +1,4 @@
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -31,7 +32,7 @@ public class checkPrime {
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int number = Integer.parseInt(br.readLine());
+		int number = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
 
 		if (isPrime(number))
 			System.out.println(number + " is a prime number");

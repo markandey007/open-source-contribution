@@ -1,3 +1,4 @@
+import io.github.pixee.security.BoundedLineReader;
 import java.io.*;
 
 public class armstrong
@@ -7,7 +8,7 @@ public class armstrong
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n,r,sum=0,temp;
 		System.out.println("Give The Value:");
-		n=Integer.parseInt(br.readLine());
+		n=Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
 		temp=n;    
 		while(n>0)    
 		{    
