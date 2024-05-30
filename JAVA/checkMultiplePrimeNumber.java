@@ -18,7 +18,9 @@ class primeNumber {
         for (int i = 2; i * i <= Num; i++) { // Used i*i instead of i coz of less time consumption,
                                              // We can also use i < Num
             if (Num % i == 0)
-                return false;
+                {
+                    return false;
+                }
         }
         return true;
     }
