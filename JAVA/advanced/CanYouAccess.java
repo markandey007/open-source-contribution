@@ -3,6 +3,7 @@
  */
 package com.javaaid.hackerrank.solutions.languages.java.advanced;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.security.Permission;
@@ -14,7 +15,7 @@ public class CanYouAccess {
 
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			int num = Integer.parseInt(br.readLine().trim());
+			int num = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000).trim());
 			Object o;// Must be used to hold the reference of the instance of the class
 						// Solution.Inner.Private
 

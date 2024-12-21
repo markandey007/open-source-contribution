@@ -3,6 +3,7 @@
  */
 package com.javaaid.hackerrank.solutions.languages.java.advanced;
 
+import io.github.pixee.security.BoundedLineReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -51,12 +52,12 @@ public class JavaLambdaExpressions {
 	public static void main(String[] args) throws IOException {
 		MyMath ob = new MyMath();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int T = Integer.parseInt(br.readLine());
+		int T = Integer.parseInt(BoundedLineReader.readLine(br, 5_000_000));
 		PerformOperation op;
 		boolean ret = false;
 		String ans = null;
 		while (T-- > 0) {
-			String s = br.readLine().trim();
+			String s = BoundedLineReader.readLine(br, 5_000_000).trim();
 			StringTokenizer st = new StringTokenizer(s);
 			int ch = Integer.parseInt(st.nextToken());
 			int num = Integer.parseInt(st.nextToken());
